@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Street Food Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="module" src="dashboard.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🌮 Welcome to Street Food Paradise!</h1>
+    <button onclick="signOut()" class="clear-btn" style="float:right">Logout</button>
+
+    <h2>Available Street Food Items</h2>
+    <ul id="itemList"></ul>
+
+    <h2>🛒 Your Cart</h2>
+    <ul id="cartList"></ul>
+
+    <div class="bill-box">
+      <strong>Total: ₹<span id="cartTotal">0</span></strong>
+      <button id="billBtn" onclick="showBill()" style="margin-left:18px;">Checkout & Bill</button>
+    </div>
+
+    <div id="billSection" style="display:none;">
+      <h3>🧾 Bill</h3>
+      <div id="billDetails"></div>
+      <button onclick="resetCart()" class="clear-btn">Clear Cart</button>
+    </div>
+  </div>
+</body>
+</html>
